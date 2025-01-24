@@ -22,75 +22,75 @@
 
 
 ## (2/8) Database Description
-### 1) Book Table: 
+#### 1) Book Table: 
 . Contains a list of all books available in the store.
 . Relationship:
       . Many-to-Many with the author table via the book_author table.
       
-### 2) Book_Author Table:
+#### 2) Book_Author Table:
 . Represents the many-to-many relationship between books and authors.
 . Contains references to:
       . book table (via book_id).
       . author table (via author_id).
       
-### 3) Author Table:
+#### 3) Author Table:
  . Contains a list of all authors.
  
-### 4) Book_Language Table:
+#### 4) Book_Language Table:
 . Contains a list of possible languages for books.
 . Relationship:
       . Linked to the book table.
       
-### 5) Publisher Table:
+#### 5) Publisher Table:
 . Contains a list of publishers for books.
 . Relationship:
       . Linked to the book table.
       
-### 6) Customer Table:
+#### 6) Customer Table:
 . Contains a list of customers of the bookstore.
 
-### 7) Customer_Address Table:
+#### 7) Customer_Address Table:
 . Represents the many-to-many relationship between customers and addresses.
 . Contains references to:
       . customer table (via customer_id).
       . address table (via address_id).
       
-### 8) Address Table:
+#### 8) Address Table:
 . Contains a list of addresses.
 . Relationship:
       . One-to-Many with the customer_address table.
       . One-to-Many with the address_status table (indicates current or old status).
       
-### 9) Address_Status Table:
+#### 9) Address_Status Table:
 . Contains the status of an address (e.g., current, old).
 
-### 10) Country Table:
+#### 10) Country Table:
 . Contains a list of countries.
 . Relationship:
       . Linked to the address table.
       
-### 11) Cust_Order Table:
+#### 11) Cust_Order Table:
 . Contains orders placed by customers.
 . Relationship:
       . One-to-Many with the order_line table (each order can have multiple items).
       . Linked to customer table (via customer_id).
       . Linked to shipping_method table.
       
-### 12) Order_Line Table:
+#### 12) Order_Line Table:
 . Represents the list of books in an order.
 . Contains references to:
       . cust_order table.
       . book table.
       
-### 13) Shipping_Method Table:
+#### 13) Shipping_Method Table:
 . Contains possible shipping methods for an order.
 
-### 14) Order_History Table:
+#### 14) Order_History Table:
 . Tracks the history of an order (e.g., ordered, cancelled, delivered).
 . Relationship:
       . Linked to cust_order table.
       
-### 15) Order_Status Table:
+#### 15) Order_Status Table:
 . Contains the possible statuses of an order.
 
 . Summary of Key Relationships:
