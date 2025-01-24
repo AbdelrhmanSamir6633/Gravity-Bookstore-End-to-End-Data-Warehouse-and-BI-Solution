@@ -23,9 +23,9 @@
 
 ## (2/8) Database Description
 #### 1) Book Table: 
-. Contains a list of all books available in the store.
-. Relationship:
-      . Many-to-Many with the author table via the book_author table.
+- Contains a list of all books available in the store.
+- Relationship:
+      - Many-to-Many with the author table via the book_author table.
       
 #### 2) Book_Author Table:
 . Represents the many-to-many relationship between books and authors.
@@ -50,10 +50,10 @@
 . Contains a list of customers of the bookstore.
 
 #### 7) Customer_Address Table:
-. Represents the many-to-many relationship between customers and addresses.
-. Contains references to:
-      . customer table (via customer_id).
-      . address table (via address_id).
+- Represents the many-to-many relationship between customers and addresses.
+- Contains references to:
+      - customer table (via customer_id).
+      - address table (via address_id).
       
 #### 8) Address Table:
 . Contains a list of addresses.
