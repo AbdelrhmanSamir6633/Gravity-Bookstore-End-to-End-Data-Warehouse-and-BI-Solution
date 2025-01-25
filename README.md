@@ -52,6 +52,7 @@ The Gravity Book Store DWH model is designed to support **sales performance anal
 
 
 ## (2/8) Database Description
+![Gravity bookstore Diagram OLTP DB](https://github.com/user-attachments/assets/462760f6-ebca-486e-b979-10af1adba4d9)
 
 Gravity Bookstore OLTP Database
 The Gravity Bookstore database is a transactional system designed to manage real-time operations for a fictional bookstore. It includes comprehensive tables for managing books, authors, customers, orders, inventory, and shipping. It serves as the foundation for building a data warehouse and creating advanced BI solutions.
