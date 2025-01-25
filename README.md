@@ -418,4 +418,21 @@ The Power BI dashboard provides actionable insights into the Gravity Book Store 
       - Bookmark.
       - ToolTip Page.
       - PowerBI Dashboard (.pbix file).
+    
+## Work Environment & Contributors
 
+### Jira Work Environment:
+
+- <a href="https://sarahfikry91.atlassian.net/jira/software/projects/KAN/list">Jira Work Environment</a>
+
+This project was collaboratively managed using Jira, ensuring efficient task tracking, sprint planning, and progress monitoring. Jira facilitated clear communication and assignment of responsibilities among the team members, allowing seamless coordination and timely completion of deliverables. The development team consisted of:
+
+### Contributors: 
+
+1) Sarah Fikry Ezzat.
+2) Abdelrhman Samir Ebrahim Hassan.
+3) Abdelrahman Mahmoud Mahmoud Saleh.
+4) Ahmed Mahmoud Attya.
+5) Nafisa Abdelaziz Farag Elkady
+
+Each team member played a critical role in achieving the project's objectives, leveraging Jira to stay aligned on priorities and updates throughout the development lifecycle.
