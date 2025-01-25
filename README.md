@@ -22,6 +22,7 @@ The Gravity Bookstore project is an end-to-end data solution designed to transfo
 
 
 ## (2/8) Database Description
+![Gravity bookstore Diagram OLTP DB](https://github.com/user-attachments/assets/71861704-5275-45e5-b0e5-2a3381c05e57)
 
 #### 1) Book Table:
 - Contains a list of all books available in the store.
