@@ -429,10 +429,10 @@ This project was collaboratively managed using Jira, ensuring efficient task tra
 
 ### Contributors: 
 
-1) Sarah Fikry Ezzat.
-2) Abdelrhman Samir Ebrahim Hassan.
-3) Abdelrahman Mahmoud Mahmoud Saleh.
-4) Ahmed Mahmoud Attya.
-5) Nafisa Abdelaziz Farag Elkady
+1) <a href="https://github.com/sarahfikry22">Sarah Fikry Ezzat.</a>
+2) <a href="https://github.com/AbdelrhmanSamir6633">Abdelrhman Samir Ebrahim Hassan.</a> 
+3) <a href="https://github.com/abdelrahmansaleh22">Abdelrahman Mahmoud Mahmoud Saleh.</a>  
+4) <a href="https://github.com/AhmeddMahmoudd98">Ahmed Mahmoud Attya.</a>   
+5) <a href="https://github.com/Nafisa455">Nafisa Abdelaziz Farag Elkady.</a>  
 
 Each team member played a critical role in achieving the project's objectives, leveraging Jira to stay aligned on priorities and updates throughout the development lifecycle.
