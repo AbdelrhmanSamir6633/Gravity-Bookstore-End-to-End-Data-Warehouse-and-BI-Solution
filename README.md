@@ -241,6 +241,7 @@ Each SSIS package is designed to ensure accurate and efficient data loading into
 
 ## (5/8) Data Analysis Using SSAS
 ### Tabular Mode in SSAS
+![05_ Fact_Sales_SSAS_Cube](https://github.com/user-attachments/assets/9545b002-ea1e-4d0f-9776-ea3e8de581f8)
 
 We use **Tabular Mode** in SSAS as it is a modern and efficient modeling method for building analytical models. It uses a columnar database and an in-memory analytics engine, providing rapid query performance and intuitive modeling techniques. The **Gravity Bookstore** project leverages SSAS Tabular Mode for creating a robust analytical solution.
 
