@@ -240,8 +240,66 @@ Each SSIS package is designed to ensure accurate and efficient data loading into
 
 
 ## (5/8) Data Analysis Using SSAS
+### Tabular Mode in SSAS
 
+We use **Tabular Mode** in SSAS as it is a modern and efficient modeling method for building analytical models. It uses a columnar database and an in-memory analytics engine, providing rapid query performance and intuitive modeling techniques. The **Gravity Bookstore** project leverages SSAS Tabular Mode for creating a robust analytical solution.
 
+---
+
+## Measures in Tabular Mode (SSAS)
+
+### 1) Total Shipping Cost
+- **Description**: Calculates the total shipping cost by summing the maximum cost per order.
+- **Formula**:
+  ```DAX
+  SUMX(VALUES(Fact_sales[order_id]), CALCULATE(MAX(Fact_sales[total_cost])))
+### 2) Number of Orders
+- **Description**: Counts the distinct number of orders.
+- **Formula**:
+  ```DAX
+  DISTINCTCOUNT(Fact_sales[order_id])
+
+### 3) Number of Books
+- **Description**: Counts the distinct number of books in the store.
+- **Formula**:
+  ```DAX
+  DISTINCTCOUNT(book[book_id_Bk])
+  
+### 4) Number of Customers
+- **Description**: Counts the distinct number of customers who placed orders.
+- **Formula**:
+  ```DAX
+  DISTINCTCOUNT(customer[customer_id_Bk])
+
+### 5) Total Sales
+- **Description**: Sums up the book prices for all sales.
+- **Formula**:
+  ```DAX
+  SUM(Fact_sales[book_price])
+  
+### 6) Average Sales
+- **Description**: Computes the average book price across all sales.
+- **Formula**:
+  ```DAX
+  AVERAGE(Fact_sales[book_price])
+  
+### 7) Execution Time
+- **Description**: Tracks the date and time of the last cube execution.
+- **Formula**:
+  ```DAX
+  "Executed : " & FORMAT(NOW(), "YYYY-MM-DD || HH:mm")
+
+### 8) Total Sales (All)
+- **Description**: Calculates the total sales, ignoring filters on the customer country.
+- **Formula**:
+  ```DAX
+  CALCULATE([Total Sales], ALL(customer[country]))
+
+### 9) Percentage of Sales
+- **Description**: Calculates the percentage of sales relative to total sales across all customers.
+- **Formula**:
+  ```DAX
+  DIVIDE([Total Sales], [Total Sales All]) * 100 & "%"
 
 
 # (6/8) Analysis Process/Methodology
