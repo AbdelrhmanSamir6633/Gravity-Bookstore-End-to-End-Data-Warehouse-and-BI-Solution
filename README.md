@@ -130,12 +130,22 @@ The Gravity Bookstore database is a transactional system designed to manage real
 ## (3/7) Data Warehouse Modeling
 ![Gravity bookstore Diagram DWH](https://github.com/user-attachments/assets/e5708a2a-2b6f-49ec-ac7c-054d036b1507)
 
-### 3.1. Why We Use Star Schema
-3.1.1. **Simplicity:** Easy to understand and implement.
-3.1.2. **Query Performance:** Optimizes query performance by reducing joins.
-3.1.3. **Scalability:** Flexible for future business needs.
-3.1.4. **Analytical Efficiency:** Ideal for BI and reporting.
-3.1.5. **Data Integrity:** Ensures consistency across the data warehouse.
+### 3.1 Why We Use Star Schema
+
+#### 3.1.1 Simplicity
+- Easy to understand and implement.
+
+#### 3.1.2 Query Performance
+- Optimizes query performance by reducing joins.
+
+#### 3.1.3 Scalability
+- Flexible for future business needs.
+
+#### 3.1.4 Analytical Efficiency
+- Ideal for BI and reporting.
+
+#### 3.1.5 Data Integrity
+- Ensures consistency across the data warehouse.
 
 ### 3.2. How the Model Design Supports the Business Case
 
@@ -160,10 +170,18 @@ The Gravity Bookstore database is a transactional system designed to manage real
 - **Key Attributes:** `Sales_SK`, `Order_id`, `Book_K`, `Customer_K`, `Shipping_K`, `Date_K`, `Shipping_Cost`, `Book_Price`.
 
 ### 3.3 Business Use Cases
-1. **Sales Performance Dashboard**
-2. **Customer Segmentation and Targeting**
-3. **Shipping Method Optimization**
-4. **Time-Based Sales Analysis**
+
+#### 3.3.1 Sales Performance Dashboard
+- Monitor and analyze total sales, best-selling books, and profitability.
+
+#### 3.3.2 Customer Segmentation and Targeting
+- Identify customer groups and tailor marketing strategies based on purchasing patterns.
+
+#### 3.3.3 Shipping Method Optimization
+- Evaluate and optimize shipping methods for cost-effectiveness and efficiency.
+
+#### 3.3.4 Time-Based Sales Analysis
+- Analyze sales trends over time, including seasonal patterns and holiday performance.
 
 ## (4/7) Data Warehouse ETL Process Using SSIS
 
