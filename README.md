@@ -4,13 +4,15 @@
 ## Project Description
 The Gravity Bookstore project is an end-to-end data solution designed to transform raw transactional data from a fictional bookstore into actionable business insights. The project encompasses data modeling, ETL processes, data warehousing, OLAP cube development, and BI reporting, making it a comprehensive data engineering and business intelligence implementation.
 
-## Content:
+## Contents 
 
-1- Understand Business Case
-2- Database Description
-3-
-4-
-
+- **(1/7) Business Case.**
+- **(2/7) Database Description.**
+- **(3/7) Dataware house Description.**
+- **(4/7) Data Warehouse ETL Process.**
+- **(5/7) Data Analysis Using SSAS.**
+- **(6/7) Analysis Process/Methodology.**
+- **(7/7) Data Source & Project Files.**
 
 
 
@@ -248,7 +250,7 @@ The Power BI dashboard provides actionable insights into the Gravity Book Store 
 
 ## Page 1: Books Report
 
-![p1](https://github.com/user-attachments/assets/5979f937-ea07-47f1-9210-4d2b3e2515d6)
+![p2](https://github.com/user-attachments/assets/e82b4645-9942-4c0a-8750-0bc2f37bb8af)
 
 ### Charts and Insights
 1. **Total Due (KPI Card):**  
@@ -264,7 +266,7 @@ The Power BI dashboard provides actionable insights into the Gravity Book Store 
 
 ## Page 2: Sales Report
 
-![p2](https://github.com/user-attachments/assets/e82b4645-9942-4c0a-8750-0bc2f37bb8af)
+![p1](https://github.com/user-attachments/assets/5979f937-ea07-47f1-9210-4d2b3e2515d6)
 
 ### Charts and Insights
 1. **Total Due, Total Sales, Total Shipping Cost, Average Sales (KPI Cards):**  
@@ -274,9 +276,9 @@ The Power BI dashboard provides actionable insights into the Gravity Book Store 
 3. **Total Due by Month (Line Chart):**  
    - *Business Question:* What are the monthly sales trends, and are there any seasonal patterns?
 
-## Page 3: Total Due With Status by Country
+## ToolTip Page: Total Due With Status by Country
 
-
+![WhatsApp Image 2025-01-25 at 21 01 41_5c0b9010](https://github.com/user-attachments/assets/aa616260-9b4a-418a-9e5d-2702f48f626d)
 
 ### Charts and Insights
 1. **Total Due With Status by Country (Table):**  
@@ -285,6 +287,9 @@ The Power BI dashboard provides actionable insights into the Gravity Book Store 
    - *Business Question:* Which books are the best-selling, and how much revenue do they generate?
 
 ## Page 4: Conclusion
+
+![p3](https://github.com/user-attachments/assets/bf887a5e-b20e-4498-ae63-ae92d10279e9)
+
 ### Charts and Insights
 1. **Total Shipping Cost by Shipping Method (Bar Chart):**  
    - *Business Question:* Which shipping methods incur the highest costs?
@@ -295,7 +300,7 @@ The Power BI dashboard provides actionable insights into the Gravity Book Store 
 The Gravity Book Store Dashboard provides a comprehensive view of the business, enabling stakeholders to make data-driven decisions. Each page and chart is designed to answer specific business questions, ensuring that the insights are actionable and aligned with business goals.
 
 
-## (7/8) Key Visualizations
+
 
 
 
