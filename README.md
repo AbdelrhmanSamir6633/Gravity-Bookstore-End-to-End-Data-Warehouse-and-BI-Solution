@@ -384,5 +384,6 @@ The Power BI dashboard provides actionable insights into the Gravity Book Store 
 
 ## (7/7) Data Source & Project Files
 
-- <a href="https://github.com/AbdelrhmanSamir6633/Analyzing-Sales-Performance-of-an-International-Company/blob/main/Data%20Source.xlsx">Data Source</a>
+- <a href="https://github.com/sarahfikry22/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution/tree/main/gravity_bookstore%20DB">gravity_bookstore DB</a>
+
 
