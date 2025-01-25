@@ -9,7 +9,7 @@ The Gravity Bookstore project is an end-to-end data solution designed to transfo
 1- Understand Business Case
 2- Database Description
 3-
-
+4-
 
 
 
@@ -22,7 +22,6 @@ The Gravity Bookstore project is an end-to-end data solution designed to transfo
 
 
 ## (2/8) Database Description
-![Gravity bookstore Diagram OLTP DB](https://github.com/user-attachments/assets/71861704-5275-45e5-b0e5-2a3381c05e57)
 
 #### 1) Book Table:
 - Contains a list of all books available in the store.
@@ -104,8 +103,77 @@ The Gravity Bookstore project is an end-to-end data solution designed to transfo
 ## (3/8) Database Description
 
 
+## (4/8) Data Warehouse ETL Process
 
-## (4/8) Tools and Technologies Used
+This section provides a detailed overview of the SSIS (SQL Server Integration Services) packages used in the Gravity Book Store project to extract, transform, and load (ETL) data from the source database into the data warehouse (DWH). Each package is designed to handle specific types of data and uses appropriate methods for data loading.
+
+## Packages Overview
+
+### 1. DIM_Book_Package_SSIS
+
+**Purpose:**  
+Loads data into the `DIM_Book` dimension table, which contains information about books such as title, author, publisher, and publication date.
+
+**Method:**  
+- **Slowly Changing Dimension (SCD):** Manages historical and current data changes.
+  - **Historical Attribute Inserts Output:** Captures historical changes in book attributes.
+  - **Changing Attribute Updates Output:** Updates current attributes.
+  - **Derived Column:** Modifies or creates columns as needed.
+  - **OLE DB Command:** Executes SQL commands for updates or inserts.
+  - **Union All:** Combines multiple data flows.
+  - **Insert Destination:** Inserts processed data into the `DIM_Book` table.
+
+### 2. DIM_Customer_Package_SSIS
+
+**Purpose:**  
+Loads data into the `DIM_Customer` dimension table, which stores customer information such as name, email, address, and status.
+
+**Method:**  
+- **Slowly Changing Dimension (SCD):** Manages historical and current data changes.
+  - **Historical Attribute Inserts Output:** Captures historical changes in customer attributes.
+  - **Changing Attribute Updates Output:** Updates current attributes.
+  - **Derived Column:** Modifies or creates columns as needed.
+  - **OLE DB Command:** Executes SQL commands for updates or inserts.
+  - **Union All:** Combines multiple data flows.
+  - **Insert Destination:** Inserts processed data into the `DIM_Customer` table.
+
+### 3. DIM_ShippingMethod_Package_SSIS
+
+**Purpose:**  
+Loads data into the `DIM_Shipping` dimension table, which contains information about shipping methods.
+
+**Method:**  
+- **Slowly Changing Dimension (SCD):** Manages historical and current data changes.
+  - **Historical Attribute Inserts Output:** Captures historical changes in shipping attributes.
+  - **Derived Column:** Modifies or creates columns as needed.
+  - **OLE DB Command:** Executes SQL commands for updates or inserts.
+  - **Union All:** Combines multiple data flows.
+  - **Insert Destination:** Inserts processed data into the `DIM_Shipping` table.
+
+### 4. FactSales_Package_SSIS
+
+**Purpose:**  
+Loads data into the `Fact_Sales` fact table, which records sales transactions, including order details, book, customer, shipping, and date information.
+
+**Method:**  
+- **Lookup Transformation:** Matches and retrieves related data from dimension tables.
+  - **DIM_Date_Lookup:** Retrieves the corresponding date key from the `DIM_Date` table.
+  - **DIM_Customer_Lookup:** Retrieves the customer key from the `DIM_Customer` table.
+  - **DIM_Shipping_Lookup:** Retrieves the shipping key from the `DIM_Shipping` table.
+  - **DIM_Book_Lookup:** Retrieves the book key from the `DIM_Book` table.
+  - **Lookup Match Output:** Outputs matched data for further processing.
+  - **OLEDB Destination:** Inserts processed data into the `Fact_Sales` table.
+
+## Summary
+
+- **Dimension Tables (`DIM_Book`, `DIM_Customer`, `DIM_Shipping`):**  
+  These tables are loaded using the **Slowly Changing Dimension (SCD)** method to handle historical and current data changes.
+
+- **Fact Table (`Fact_Sales`):**  
+  This table is loaded using the **Lookup** method to retrieve and match keys from dimension tables, ensuring referential integrity and accurate data aggregation.
+
+Each SSIS package is designed to ensure accurate and efficient data loading into the respective tables in the data warehouse, maintaining data integrity and supporting business intelligence and reporting needs.
+
 
 ## (5/8) Data Model
 
