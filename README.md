@@ -6,54 +6,51 @@ The Gravity Bookstore project is an end-to-end data solution designed to transfo
 
 ## Contents 
 
-(1/7) **Business Case.**
+**1) Business Case.**
 
-(2/7) **Database Description.**
+**2) OLTP Database Description.**
 
-(3/7) **Dataware house Description.**
+**3) Data Warehouse Modeling.**
 
-(4/7) **Data Warehouse ETL Process.**
+**4) Data Warehouse ETL Process Using SSIS.**
 
-(5/7) **Data Analysis Using SSAS.**
+**5) Data Analysis Using SSAS.**
 
-(6/7) **Analysis Process/Methodology.**
+**6) Key Visualizations Using PowerBI.**
 
-(7/7) **Data Source & Project Files.**
-
-
+**7) Data Source & Project Files.**
 
 
+## (1/7) Business Case
 
-## (1/8) Business Case
-
-## Overview
+### 1.1 Overview
 The Gravity Book Store DWH model is designed to support **sales performance analysis**, **customer insights**, **shipping efficiency evaluation**, and **time-based reporting**. This model enables the business to make data-driven decisions and optimize operations.
 
-## Key Business Questions
-1. **Sales Performance:**
-   - What are the total sales generated over a specific period?
-   - Which books are the best-selling, and which are underperforming?
-   - How do shipping costs impact overall profitability?
+### 1.2 Key Business Questions
+1.2.1. **Sales Performance:**
+      - What are the total sales generated over a specific period?
+      - Which books are the best-selling, and which are underperforming?
+      - How do shipping costs impact overall profitability?
 
-2. **Customer Behavior:**
-   - Who are the most frequent customers, and what are their purchasing patterns?
-   - Which cities or countries generate the most sales?
-   - How do customer demographics influence sales?
+1.2.2. **Customer Behavior:**
+      - Who are the most frequent customers, and what are their purchasing patterns?
+      - Which cities or countries generate the most sales?
+      - How do customer demographics influence sales?
 
-3. **Shipping Efficiency:**
-   - Which shipping methods are most cost-effective and efficient?
-   - Are there delays or issues with specific shipping methods?
-   - How does shipping method choice correlate with customer satisfaction?
+1.2.3. **Shipping Efficiency:**
+      - Which shipping methods are most cost-effective and efficient?
+      - Are there delays or issues with specific shipping methods?
+      - How does shipping method choice correlate with customer satisfaction?
 
-4. **Time-Based Analysis:**
-   - What are the sales trends over time (daily, monthly, quarterly, yearly)?
-   - Are there seasonal patterns in book sales?
-   - How do sales perform during holidays or special events?
+1.2.4. **Time-Based Analysis:**
+      - What are the sales trends over time (daily, monthly, quarterly, yearly)?
+      - Are there seasonal patterns in book sales?
+      - How do sales perform during holidays or special events?
 
 
-## (2/8) Database Description
-![Gravity bookstore Diagram OLTP DB](https://github.com/user-attachments/assets/462760f6-ebca-486e-b979-10af1adba4d9)
+## (2/7) OLTP Database Description
 
+### 2.1 Overview
 Gravity Bookstore OLTP Database
 The Gravity Bookstore database is a transactional system designed to manage real-time operations for a fictional bookstore. It includes comprehensive tables for managing books, authors, customers, orders, inventory, and shipping. It serves as the foundation for building a data warehouse and creating advanced BI solutions.
 
@@ -128,59 +125,54 @@ The Gravity Bookstore database is a transactional system designed to manage real
 #### 15) Order_Status Table:
 - Contains the possible statuses of an order.
 
-### Summary of Key Relationships:
-- **Many-to-Many**: `book` ↔ `author` (via `book_author`), `customer` ↔ `address` (via `customer_address`).
-- **One-to-Many**: `cust_order` ↔ `order_line`, `address` ↔ `customer_address`, `cust_order` ↔ `order_history`.
 
-
-## (3/8) Dataware house Description
+## (3/7) Data Warehouse Modeling
 ![Gravity bookstore Diagram DWH](https://github.com/user-attachments/assets/e5708a2a-2b6f-49ec-ac7c-054d036b1507)
 
-### Why We Use Star Schema
+### 3.1 Why We Use Star Schema
 1. **Simplicity:** Easy to understand and implement.
 2. **Query Performance:** Optimizes query performance by reducing joins.
 3. **Scalability:** Flexible for future business needs.
 4. **Analytical Efficiency:** Ideal for BI and reporting.
 5. **Data Integrity:** Ensures consistency across the data warehouse.
 
-### How the Model Design Supports the Business Case
+### 3.2 How the Model Design Supports the Business Case
 
-#### 1. DIM_Book
+#### 1) DIM_Book
 - **Purpose:** Stores book-related information for sales analysis.
 - **Key Attributes:** `Book_SK`, `Book_NK`, `Title`, `Author_Name`, `Publisher_Name`, `Publication_Date`, `Start_Date`, `End_Date`, `Is_Current`.
 
-#### 2. DIM_Customer
+#### 2) DIM_Customer
 - **Purpose:** Stores customer details for segmentation and behavior analysis.
 - **Key Attributes:** `Customer_SK`, `Customer_NK`, `Frame`, `Iname`, `Email`, `Street_Number`, `Street_Name`, `City`, `Country`, `Address_Status`, `Start_Date`, `End_Date`, `Is_Current`.
 
-#### 3. DIM_Shipping
+#### 3) DIM_Shipping
 - **Purpose:** Tracks shipping methods for efficiency and cost-effectiveness analysis.
 - **Key Attributes:** `Shipping_SK`, `Shipping_NK`, `Method_Name`, `Start_Date`, `End_Date`, `Is_Current`.
 
-#### 4. DIM_Date
+#### 4) DIM_Date
 - **Purpose:** Provides time-based analysis for sales trends.
 - **Key Attributes:** `Date_SK`, `Year`, `Quarter`, `Month`, `Day`.
 
-#### 5. Fact_Sales
+#### 5) Fact_Sales
 - **Purpose:** Captures sales transactions for detailed performance analysis.
 - **Key Attributes:** `Sales_SK`, `Order_id`, `Book_K`, `Customer_K`, `Shipping_K`, `Date_K`, `Shipping_Cost`, `Book_Price`.
 
-### Business Use Cases
+### 3.3 Business Use Cases
 1. **Sales Performance Dashboard**
 2. **Customer Segmentation and Targeting**
 3. **Shipping Method Optimization**
 4. **Time-Based Sales Analysis**
 
-### Conclusion
-The Gravity Book Store DWH model provides actionable insights to optimize operations, improve customer satisfaction, and drive revenue growth.
+## (4/7) Data Warehouse ETL Process Using SSIS
 
-## (4/8) Data Warehouse ETL Process
+### 4.1 Overview
 
 This section provides a detailed overview of the SSIS (SQL Server Integration Services) packages used in the Gravity Book Store project to extract, transform, and load (ETL) data from the source database into the data warehouse (DWH). Each package is designed to handle specific types of data and uses appropriate methods for data loading.
 
-## Packages Overview
+### 4.2 Packages Overview
 
-### 1. DIM_Book_Package_SSIS
+### 1) DIM_Book Package
 ![01_DIM_Book_Package_SSIS](https://github.com/user-attachments/assets/f9005b86-842d-4e91-8161-a35d74415ccb)
 
 **Purpose:**  
@@ -195,7 +187,7 @@ Loads data into the `DIM_Book` dimension table, which contains information about
   - **Union All:** Combines multiple data flows.
   - **Insert Destination:** Inserts processed data into the `DIM_Book` table.
 
-### 2. DIM_Customer_Package_SSIS
+### 2) DIM_Customer Package
 ![02_DIM_Customer_Package_SSIS](https://github.com/user-attachments/assets/1434aae0-af01-4f7c-88c8-380065106bbf)
 
 **Purpose:**  
@@ -210,7 +202,7 @@ Loads data into the `DIM_Customer` dimension table, which stores customer inform
   - **Union All:** Combines multiple data flows.
   - **Insert Destination:** Inserts processed data into the `DIM_Customer` table.
 
-### 3. DIM_ShippingMethod_Package_SSIS
+### 3) DIM_ShippingMethod Package
 ![03_DIM_ShippingMethod_Package_SSIS](https://github.com/user-attachments/assets/525b6e14-1f5f-402a-a6d1-0cca4cc9825e)
 
 **Purpose:**  
@@ -224,7 +216,7 @@ Loads data into the `DIM_Shipping` dimension table, which contains information a
   - **Union All:** Combines multiple data flows.
   - **Insert Destination:** Inserts processed data into the `DIM_Shipping` table.
 
-### 4. FactSales_Package_SSIS
+### 4) FactSales Package
 ![04_FactSales_Package_SSIS](https://github.com/user-attachments/assets/23ca5b1d-891a-49a9-a033-dd03686d62dc)
 
 **Purpose:**  
@@ -239,26 +231,17 @@ Loads data into the `Fact_Sales` fact table, which records sales transactions, i
   - **Lookup Match Output:** Outputs matched data for further processing.
   - **OLEDB Destination:** Inserts processed data into the `Fact_Sales` table.
 
-## Summary
-
-- **Dimension Tables (`DIM_Book`, `DIM_Customer`, `DIM_Shipping`):**  
-  These tables are loaded using the **Slowly Changing Dimension (SCD)** method to handle historical and current data changes.
-
-- **Fact Table (`Fact_Sales`):**  
-  This table is loaded using the **Lookup** method to retrieve and match keys from dimension tables, ensuring referential integrity and accurate data aggregation.
-
 Each SSIS package is designed to ensure accurate and efficient data loading into the respective tables in the data warehouse, maintaining data integrity and supporting business intelligence and reporting needs.
 
 
-## (5/8) Data Analysis Using SSAS
-### Tabular Mode in SSAS
+## (5/7) Data Analysis Using SSAS
+
+### 5.1 Tabular Mode in SSAS
 ![05_ Fact_Sales_SSAS_Cube](https://github.com/user-attachments/assets/9545b002-ea1e-4d0f-9776-ea3e8de581f8)
 
 We use **Tabular Mode** in SSAS as it is a modern and efficient modeling method for building analytical models. It uses a columnar database and an in-memory analytics engine, providing rapid query performance and intuitive modeling techniques. The **Gravity Bookstore** project leverages SSAS Tabular Mode for creating a robust analytical solution.
 
----
-
-## Measures in Tabular Mode (SSAS)
+### 5.2 Measures in Tabular Mode (SSAS)
 
 ### 1) Total Shipping Cost
 - **Description**: Calculates the total shipping cost by summing the maximum cost per order.
@@ -314,12 +297,34 @@ We use **Tabular Mode** in SSAS as it is a modern and efficient modeling method 
   DIVIDE([Total Sales], [Total Sales All]) * 100 & "%"
 
 
-# (6/8) Analysis Process/Methodology
+# (6/7) Key Visualizations Using PowerBI.
 
-## Overview of Power BI Dashboard
+### 6.1 Overview of Power BI Dashboard
 The Power BI dashboard provides actionable insights into the Gravity Book Store business operations. It is divided into multiple pages, each focusing on a specific aspect of the business: **Books Report**, **Sales Report**, **Total Due With Status by Country**, and **Conclusion**.
 
-## Page 1: Books Report
+### Page 01: Sales Report
+
+![p1](https://github.com/user-attachments/assets/5979f937-ea07-47f1-9210-4d2b3e2515d6)
+
+### Charts and Insights
+1. **Total Due, Total Sales, Total Shipping Cost, Average Sales (KPI Cards):**  
+   - *Business Question:* What are the total sales, shipping costs, and average sales per order?
+2. **Top 7 Countries by Total Due (Bar Chart):**  
+   - *Business Question:* Which countries generate the most revenue?
+3. **Total Due by Month (Line Chart):**  
+   - *Business Question:* What are the monthly sales trends, and are there any seasonal patterns?
+4. **Matrix Bookmark**
+   - Bookmark is used to convert between line bookmark and matrix bookmark, as shown below:
+![Bookmark](https://github.com/user-attachments/assets/4e5c7729-910a-41b3-8d3d-b459550fba2c)
+   4.1 **Top 5 Authors by Total Sales (Matrix Table)**
+      - *Business Questions:* - How many Books have been sold for EACH Author of **Top 5 Authors**?
+                              - What is the Total Sales for EACH Author of **Top 5 Authors**?
+   4.2 **Total Orders (KPI Card):**  
+      - *Business Question:* How many orders have been made?
+   4.3 **Top 5 Authors' Sold Books**
+      - *Business Question:* How many Books have been sold for the ONLY **Top 5 Authors**?
+   
+## Page 02: Books Report
 
 ![p2](https://github.com/user-attachments/assets/e82b4645-9942-4c0a-8750-0bc2f37bb8af)
 
@@ -335,17 +340,22 @@ The Power BI dashboard provides actionable insights into the Gravity Book Store 
 5. **Shipping Method (Donut Chart):**  
    - *Business Question:* Which shipping methods are most commonly used?
 
-## Page 2: Sales Report
+## Page 03: Conclusion
 
-![p1](https://github.com/user-attachments/assets/5979f937-ea07-47f1-9210-4d2b3e2515d6)
+![p3](https://github.com/user-attachments/assets/bf887a5e-b20e-4498-ae63-ae92d10279e9)
 
 ### Charts and Insights
-1. **Total Due, Total Sales, Total Shipping Cost, Average Sales (KPI Cards):**  
-   - *Business Question:* What are the total sales, shipping costs, and average sales per order?
-2. **Top 7 Countries by Total Due (Bar Chart):**  
-   - *Business Question:* Which countries generate the most revenue?
-3. **Total Due by Month (Line Chart):**  
-   - *Business Question:* What are the monthly sales trends, and are there any seasonal patterns?
+1. **Total Due with Status by Country (Matrix Table):**  
+   - *Business Question:* Which Country generates the most Revenue?
+2. **Top 13 Books Sold (Matrix Table):**  
+   - *Business Question:* Which top 13 books contributes the most to revenue?
+3. **Top 13 Authors (Matrix Table):**  
+   - *Business Question:* Which top 13 authors contribute the most to revenue?
+4. **Order Status by year (Matrix Table):**  
+   - *Business Question:* How orders' status is affected versus time?
+5. **Total Due by Country (Map Visualization):**  
+   - *Business Question:* Which regions generate the most revenue geographically?
+
 
 ## ToolTip Page: Total Due With Status by Country
 
@@ -357,26 +367,8 @@ The Power BI dashboard provides actionable insights into the Gravity Book Store 
 2. **Top 13 Books Sold (Table):**  
    - *Business Question:* Which books are the best-selling, and how much revenue do they generate?
 
-## Page 4: Conclusion
 
-![p3](https://github.com/user-attachments/assets/bf887a5e-b20e-4498-ae63-ae92d10279e9)
-
-### Charts and Insights
-1. **Total Shipping Cost by Shipping Method (Bar Chart):**  
-   - *Business Question:* Which shipping methods incur the highest costs?
-2. **Total Due by Country (Map Visualization):**  
-   - *Business Question:* Which regions generate the most revenue geographically?
-
-## Conclusion
-The Gravity Book Store Dashboard provides a comprehensive view of the business, enabling stakeholders to make data-driven decisions. Each page and chart is designed to answer specific business questions, ensuring that the insights are actionable and aligned with business goals.
-
-
-
-
-
-
-
-## (8/8) Data Source & Project Files
+## (7/7) Data Source & Project Files
 
 - <a href="https://github.com/AbdelrhmanSamir6633/Analyzing-Sales-Performance-of-an-International-Company/blob/main/Data%20Source.xlsx">Data Source</a>
 
