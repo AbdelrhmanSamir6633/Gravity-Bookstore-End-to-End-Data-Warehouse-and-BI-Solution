@@ -336,9 +336,8 @@ The Power BI dashboard provides actionable insights into the Gravity Book Store 
    - Bookmark is used to convert between line bookmark and matrix bookmark, as shown below:
 ![Bookmark](https://github.com/user-attachments/assets/4e5c7729-910a-41b3-8d3d-b459550fba2c)
    - 4.1 **Top 5 Authors by Total Sales (Matrix Table)**
-      - *Business Questions:* - How many Books have been sold for EACH Author of **Top 5 Authors**?
-
-                              - What is the Total Sales for EACH Author of **Top 5 Authors**?
+     - How many books have been sold for **each author** of the **Top 5 Authors**?
+     - What is the **total sales** for **each author** of the **Top 5 Authors**?
    - 4.2 **Total Orders (KPI Card):**  
       - *Business Question:* How many orders have been made?
    - 4.3 **Top 5 Authors' Sold Books**
