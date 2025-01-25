@@ -385,37 +385,37 @@ The Power BI dashboard provides actionable insights into the Gravity Book Store 
 ## (7/7) Data Source & Project Files
 
 - <a href="https://github.com/sarahfikry22/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution/tree/main/gravity_bookstore%20DB">gravity_bookstore DB</a>
-  Contents:
-    - OLTP DB Diagram.
-    - OLTP DB ERD.
-    - OLTP DB Mapping.
+    - Contents:
+      - OLTP DB Diagram.
+      - OLTP DB ERD.
+      - OLTP DB Mapping.
 - <a href="https://github.com/sarahfikry22/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution/tree/main/SQL%20Queries">SQL Queries</a>
- Contents:
-    - OLTP DB SQL Queries.
-    - DWH SQL Queries.
+   - Contents:
+      - OLTP DB SQL Queries.
+      - DWH SQL Queries.
 - <a href="https://github.com/sarahfikry22/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution/tree/main/Gravity_bookstore_DWH">Gravity_bookstore_DWH</a>
- Contents:
-    - DWH Modeling.
-    - DWH Backup (.bak file).
+   - Contents:
+      - DWH Modeling.
+      - DWH Backup (.bak file).
 - <a href="https://github.com/sarahfikry22/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution/tree/main/Gravity_BookStore_SSIS_Packages">Gravity_BookStore_SSIS_Packages</a>
- Contents:
-    - DIM_Book SSIS Package.
-    - DIM_Customer SSIS Package.
-    - DIM_ShippingMethod SSIS Package.
-    - FactSales SSIS Package.
+   - Contents:
+      - DIM_Book SSIS Package.
+      - DIM_Customer SSIS Package.
+      - DIM_ShippingMethod SSIS Package.
+      - FactSales SSIS Package.
 - <a href="https://github.com/sarahfikry22/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution/tree/main/Gravity_BookStore_SSAS_Cubes">Gravity_BookStore_SSAS_Cubes</a>
- Contents:
-    - DIM_Book SSAS Cube.
-    - DIM_Customer SSAS Cube.
-    - DIM_ShippingMethod SSAS Cube.
-    - DIM_Date SSAS Cube.
-    - FactSales SSAS Cube.
+   - Contents:
+      - DIM_Book SSAS Cube.
+      - DIM_Customer SSAS Cube.
+      - DIM_ShippingMethod SSAS Cube.
+      - DIM_Date SSAS Cube.
+      - FactSales SSAS Cube.
 - <a href="https://github.com/sarahfikry22/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution/tree/main/Power%20BI%20Dashboard">Power BI Dashboard</a>
- Contents:
-    - Sales Report.
-    - Book Report.
-    - Conclusion Report.
-    - Bookmark.
-    - ToolTip Page.
-    - PowerBI Dashboard (.pbix file).
+   - Contents:
+      - Sales Report.
+      - Book Report.
+      - Conclusion Report.
+      - Bookmark.
+      - ToolTip Page.
+      - PowerBI Dashboard (.pbix file).
 
