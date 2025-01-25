@@ -6,13 +6,13 @@ The Gravity Bookstore project is an end-to-end data solution designed to transfo
 
 ## Contents 
 
-- **Business Case.**
-- **Database Description.**
-- **Dataware house Description.**
-- **Data Warehouse ETL Process.**
-- **Data Analysis Using SSAS.**
-- **Analysis Process/Methodology.**
-- **Data Source & Project Files.**
+(1/7) **Business Case.**
+(2/7) **Database Description.**
+(3/7) **Dataware house Description.**
+(4/7) **Data Warehouse ETL Process.**
+(5/7) **Data Analysis Using SSAS.**
+(6/7) **Analysis Process/Methodology.**
+(7/7) **Data Source & Project Files.**
 
 
 
@@ -45,6 +45,9 @@ The Gravity Book Store DWH model is designed to support **sales performance anal
 
 
 ## (2/8) Database Description
+
+Gravity Bookstore OLTP Database
+The Gravity Bookstore database is a transactional system designed to manage real-time operations for a fictional bookstore. It includes comprehensive tables for managing books, authors, customers, orders, inventory, and shipping. It serves as the foundation for building a data warehouse and creating advanced BI solutions.
 
 #### 1) Book Table:
 - Contains a list of all books available in the store.
