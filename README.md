@@ -110,6 +110,7 @@ This section provides a detailed overview of the SSIS (SQL Server Integration Se
 ## Packages Overview
 
 ### 1. DIM_Book_Package_SSIS
+![01_DIM_Book_Package_SSIS](https://github.com/user-attachments/assets/f9005b86-842d-4e91-8161-a35d74415ccb)
 
 **Purpose:**  
 Loads data into the `DIM_Book` dimension table, which contains information about books such as title, author, publisher, and publication date.
@@ -124,6 +125,7 @@ Loads data into the `DIM_Book` dimension table, which contains information about
   - **Insert Destination:** Inserts processed data into the `DIM_Book` table.
 
 ### 2. DIM_Customer_Package_SSIS
+![02_DIM_Customer_Package_SSIS](https://github.com/user-attachments/assets/1434aae0-af01-4f7c-88c8-380065106bbf)
 
 **Purpose:**  
 Loads data into the `DIM_Customer` dimension table, which stores customer information such as name, email, address, and status.
@@ -138,6 +140,7 @@ Loads data into the `DIM_Customer` dimension table, which stores customer inform
   - **Insert Destination:** Inserts processed data into the `DIM_Customer` table.
 
 ### 3. DIM_ShippingMethod_Package_SSIS
+![03_DIM_ShippingMethod_Package_SSIS](https://github.com/user-attachments/assets/525b6e14-1f5f-402a-a6d1-0cca4cc9825e)
 
 **Purpose:**  
 Loads data into the `DIM_Shipping` dimension table, which contains information about shipping methods.
@@ -151,6 +154,7 @@ Loads data into the `DIM_Shipping` dimension table, which contains information a
   - **Insert Destination:** Inserts processed data into the `DIM_Shipping` table.
 
 ### 4. FactSales_Package_SSIS
+![04_FactSales_Package_SSIS](https://github.com/user-attachments/assets/23ca5b1d-891a-49a9-a033-dd03686d62dc)
 
 **Purpose:**  
 Loads data into the `Fact_Sales` fact table, which records sales transactions, including order details, book, customer, shipping, and date information.
