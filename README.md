@@ -337,6 +337,7 @@ The Power BI dashboard provides actionable insights into the Gravity Book Store 
 ![Bookmark](https://github.com/user-attachments/assets/4e5c7729-910a-41b3-8d3d-b459550fba2c)
    - 4.1 **Top 5 Authors by Total Sales (Matrix Table)**
       - *Business Questions:* - How many Books have been sold for EACH Author of **Top 5 Authors**?
+
                               - What is the Total Sales for EACH Author of **Top 5 Authors**?
    - 4.2 **Total Orders (KPI Card):**  
       - *Business Question:* How many orders have been made?
@@ -380,11 +381,6 @@ The Power BI dashboard provides actionable insights into the Gravity Book Store 
 
 ![WhatsApp Image 2025-01-25 at 21 01 41_5c0b9010](https://github.com/user-attachments/assets/aa616260-9b4a-418a-9e5d-2702f48f626d)
 
-### Charts and Insights
-1. **Total Due With Status by Country (Table):**  
-   - *Business Question:* Which countries contribute the most to revenue, and what is their active/inactive status?
-2. **Top 13 Books Sold (Table):**  
-   - *Business Question:* Which books are the best-selling, and how much revenue do they generate?
 
 
 ## (7/7) Data Source & Project Files
