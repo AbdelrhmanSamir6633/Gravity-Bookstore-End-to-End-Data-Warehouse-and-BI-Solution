@@ -123,6 +123,7 @@ The Gravity Book Store DWH model is designed to support **sales performance anal
 
 
 ## (3/8) Dataware house Description
+![Gravity bookstore Diagram DWH](https://github.com/user-attachments/assets/e5708a2a-2b6f-49ec-ac7c-054d036b1507)
 
 ### Why We Use Star Schema
 1. **Simplicity:** Easy to understand and implement.
