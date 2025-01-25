@@ -179,7 +179,8 @@ Loads data into the `Fact_Sales` fact table, which records sales transactions, i
 Each SSIS package is designed to ensure accurate and efficient data loading into the respective tables in the data warehouse, maintaining data integrity and supporting business intelligence and reporting needs.
 
 
-## (5/8) Data Model
+## (5/8) Data Analysis Using SSAS
+
 
 
 
