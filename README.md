@@ -386,4 +386,9 @@ The Power BI dashboard provides actionable insights into the Gravity Book Store 
 
 - <a href="https://github.com/sarahfikry22/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution/tree/main/gravity_bookstore%20DB">gravity_bookstore DB</a>
 
+- <a href="https://github.com/sarahfikry22/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution/tree/main/SQL%20Queries">SQL Queries</a>
+- <a href="https://github.com/sarahfikry22/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution/tree/main/Gravity_bookstore_DWH">Gravity_bookstore_DWH</a>
+- <a href="https://github.com/sarahfikry22/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution/tree/main/Gravity_BookStore_SSIS_Packages">Gravity_BookStore_SSIS_Packages</a>
+- <a href="https://github.com/sarahfikry22/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution/tree/main/Gravity_BookStore_SSAS_Cubes">Gravity_BookStore_SSAS_Cubes</a>
+- <a href="https://github.com/sarahfikry22/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution/tree/main/Power%20BI%20Dashboard">Power BI Dashboard</a>
 
