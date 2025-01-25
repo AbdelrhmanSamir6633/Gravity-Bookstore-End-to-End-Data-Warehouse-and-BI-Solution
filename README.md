@@ -27,25 +27,26 @@ The Gravity Bookstore project is an end-to-end data solution designed to transfo
 The Gravity Book Store DWH model is designed to support **sales performance analysis**, **customer insights**, **shipping efficiency evaluation**, and **time-based reporting**. This model enables the business to make data-driven decisions and optimize operations.
 
 ### 1.2 Key Business Questions
-1.2.1. **Sales Performance:**
-      - What are the total sales generated over a specific period?
-      - Which books are the best-selling, and which are underperforming?
-      - How do shipping costs impact overall profitability?
 
-1.2.2. **Customer Behavior:**
-      - Who are the most frequent customers, and what are their purchasing patterns?
-      - Which cities or countries generate the most sales?
-      - How do customer demographics influence sales?
+#### 1.2.1 Sales Performance
+- What are the total sales generated over a specific period?
+- Which books are the best-selling, and which are underperforming?
+- How do shipping costs impact overall profitability?
 
-1.2.3. **Shipping Efficiency:**
-      - Which shipping methods are most cost-effective and efficient?
-      - Are there delays or issues with specific shipping methods?
-      - How does shipping method choice correlate with customer satisfaction?
+#### 1.2.2 Customer Behavior
+- Who are the most frequent customers, and what are their purchasing patterns?
+- Which cities or countries generate the most sales?
+- How do customer demographics influence sales?
 
-1.2.4. **Time-Based Analysis:**
-      - What are the sales trends over time (daily, monthly, quarterly, yearly)?
-      - Are there seasonal patterns in book sales?
-      - How do sales perform during holidays or special events?
+#### 1.2.3 Shipping Efficiency
+- Which shipping methods are most cost-effective and efficient?
+- Are there delays or issues with specific shipping methods?
+- How does shipping method choice correlate with customer satisfaction?
+
+#### 1.2.4 Time-Based Analysis
+- What are the sales trends over time (daily, monthly, quarterly, yearly)?
+- Are there seasonal patterns in book sales?
+- How do sales perform during holidays or special events?
 
 
 ## (2/7) OLTP Database Description
