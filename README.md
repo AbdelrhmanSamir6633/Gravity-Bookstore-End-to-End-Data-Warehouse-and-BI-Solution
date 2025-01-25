@@ -130,14 +130,14 @@ The Gravity Bookstore database is a transactional system designed to manage real
 ## (3/7) Data Warehouse Modeling
 ![Gravity bookstore Diagram DWH](https://github.com/user-attachments/assets/e5708a2a-2b6f-49ec-ac7c-054d036b1507)
 
-### 3.1 Why We Use Star Schema
-1. **Simplicity:** Easy to understand and implement.
-2. **Query Performance:** Optimizes query performance by reducing joins.
-3. **Scalability:** Flexible for future business needs.
-4. **Analytical Efficiency:** Ideal for BI and reporting.
-5. **Data Integrity:** Ensures consistency across the data warehouse.
+### 3.1. Why We Use Star Schema
+3.1.1. **Simplicity:** Easy to understand and implement.
+3.1.2. **Query Performance:** Optimizes query performance by reducing joins.
+3.1.3. **Scalability:** Flexible for future business needs.
+3.1.4. **Analytical Efficiency:** Ideal for BI and reporting.
+3.1.5. **Data Integrity:** Ensures consistency across the data warehouse.
 
-### 3.2 How the Model Design Supports the Business Case
+### 3.2. How the Model Design Supports the Business Case
 
 #### 1) DIM_Book
 - **Purpose:** Stores book-related information for sales analysis.
