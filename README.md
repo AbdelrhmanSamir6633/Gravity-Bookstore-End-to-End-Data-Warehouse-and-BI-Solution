@@ -2,7 +2,7 @@
 
 
 ## Project Description
-
+The Gravity Bookstore project is an end-to-end data solution designed to transform raw transactional data from a fictional bookstore into actionable business insights. The project encompasses data modeling, ETL processes, data warehousing, OLAP cube development, and BI reporting, making it a comprehensive data engineering and business intelligence implementation.
 
 ## Content:
 
