@@ -6,13 +6,13 @@ The Gravity Bookstore project is an end-to-end data solution designed to transfo
 
 ## Contents 
 
-- **(1/7) Business Case.**
-- **(2/7) Database Description.**
-- **(3/7) Dataware house Description.**
-- **(4/7) Data Warehouse ETL Process.**
-- **(5/7) Data Analysis Using SSAS.**
-- **(6/7) Analysis Process/Methodology.**
-- **(7/7) Data Source & Project Files.**
+- **Business Case.**
+- **Database Description.**
+- **Dataware house Description.**
+- **Data Warehouse ETL Process.**
+- **Data Analysis Using SSAS.**
+- **Analysis Process/Methodology.**
+- **Data Source & Project Files.**
 
 
 
