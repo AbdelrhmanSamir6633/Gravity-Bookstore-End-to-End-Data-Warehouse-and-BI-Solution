@@ -15,10 +15,31 @@ The Gravity Bookstore project is an end-to-end data solution designed to transfo
 
 
 
+## (1/8) Business Case
 
-## (1/8) Problem Overview
+## Overview
+The Gravity Book Store DWH model is designed to support **sales performance analysis**, **customer insights**, **shipping efficiency evaluation**, and **time-based reporting**. This model enables the business to make data-driven decisions and optimize operations.
 
+## Key Business Questions
+1. **Sales Performance:**
+   - What are the total sales generated over a specific period?
+   - Which books are the best-selling, and which are underperforming?
+   - How do shipping costs impact overall profitability?
 
+2. **Customer Behavior:**
+   - Who are the most frequent customers, and what are their purchasing patterns?
+   - Which cities or countries generate the most sales?
+   - How do customer demographics influence sales?
+
+3. **Shipping Efficiency:**
+   - Which shipping methods are most cost-effective and efficient?
+   - Are there delays or issues with specific shipping methods?
+   - How does shipping method choice correlate with customer satisfaction?
+
+4. **Time-Based Analysis:**
+   - What are the sales trends over time (daily, monthly, quarterly, yearly)?
+   - Are there seasonal patterns in book sales?
+   - How do sales perform during holidays or special events?
 
 
 ## (2/8) Database Description
@@ -99,9 +120,45 @@ The Gravity Bookstore project is an end-to-end data solution designed to transfo
 - **One-to-Many**: `cust_order` ↔ `order_line`, `address` ↔ `customer_address`, `cust_order` ↔ `order_history`.
 
 
+## (3/8) Dataware house Description
 
-## (3/8) Database Description
+### Why We Use Star Schema
+1. **Simplicity:** Easy to understand and implement.
+2. **Query Performance:** Optimizes query performance by reducing joins.
+3. **Scalability:** Flexible for future business needs.
+4. **Analytical Efficiency:** Ideal for BI and reporting.
+5. **Data Integrity:** Ensures consistency across the data warehouse.
 
+### How the Model Design Supports the Business Case
+
+#### 1. DIM_Book
+- **Purpose:** Stores book-related information for sales analysis.
+- **Key Attributes:** `Book_SK`, `Book_NK`, `Title`, `Author_Name`, `Publisher_Name`, `Publication_Date`, `Start_Date`, `End_Date`, `Is_Current`.
+
+#### 2. DIM_Customer
+- **Purpose:** Stores customer details for segmentation and behavior analysis.
+- **Key Attributes:** `Customer_SK`, `Customer_NK`, `Frame`, `Iname`, `Email`, `Street_Number`, `Street_Name`, `City`, `Country`, `Address_Status`, `Start_Date`, `End_Date`, `Is_Current`.
+
+#### 3. DIM_Shipping
+- **Purpose:** Tracks shipping methods for efficiency and cost-effectiveness analysis.
+- **Key Attributes:** `Shipping_SK`, `Shipping_NK`, `Method_Name`, `Start_Date`, `End_Date`, `Is_Current`.
+
+#### 4. DIM_Date
+- **Purpose:** Provides time-based analysis for sales trends.
+- **Key Attributes:** `Date_SK`, `Year`, `Quarter`, `Month`, `Day`.
+
+#### 5. Fact_Sales
+- **Purpose:** Captures sales transactions for detailed performance analysis.
+- **Key Attributes:** `Sales_SK`, `Order_id`, `Book_K`, `Customer_K`, `Shipping_K`, `Date_K`, `Shipping_Cost`, `Book_Price`.
+
+### Business Use Cases
+1. **Sales Performance Dashboard**
+2. **Customer Segmentation and Targeting**
+3. **Shipping Method Optimization**
+4. **Time-Based Sales Analysis**
+
+### Conclusion
+The Gravity Book Store DWH model provides actionable insights to optimize operations, improve customer satisfaction, and drive revenue growth.
 
 ## (4/8) Data Warehouse ETL Process
 
@@ -184,8 +241,58 @@ Each SSIS package is designed to ensure accurate and efficient data loading into
 
 
 
-## (6/8) Analysis Process/Methodology
+# (6/8) Analysis Process/Methodology
 
+## Overview of Power BI Dashboard
+The Power BI dashboard provides actionable insights into the Gravity Book Store business operations. It is divided into multiple pages, each focusing on a specific aspect of the business: **Books Report**, **Sales Report**, **Total Due With Status by Country**, and **Conclusion**.
+
+## Page 1: Books Report
+
+![p1](https://github.com/user-attachments/assets/5979f937-ea07-47f1-9210-4d2b3e2515d6)
+
+### Charts and Insights
+1. **Total Due (KPI Card):**  
+   - *Business Question:* What is the total revenue generated from book sales?
+2. **No. Sold Books by Author Name (Matrix Visualization):**  
+   - *Business Question:* Which authors have the highest number of books sold?
+3. **Top 5 Authors by Total Due (Bar Chart):**  
+   - *Business Question:* Which authors contribute the most to revenue?
+4. **Total Due by Book Title (Bar Chart):**  
+   - *Business Question:* Which books generate the most revenue?
+5. **Shipping Method (Donut Chart):**  
+   - *Business Question:* Which shipping methods are most commonly used?
+
+## Page 2: Sales Report
+
+![p2](https://github.com/user-attachments/assets/e82b4645-9942-4c0a-8750-0bc2f37bb8af)
+
+### Charts and Insights
+1. **Total Due, Total Sales, Total Shipping Cost, Average Sales (KPI Cards):**  
+   - *Business Question:* What are the total sales, shipping costs, and average sales per order?
+2. **Top 7 Countries by Total Due (Bar Chart):**  
+   - *Business Question:* Which countries generate the most revenue?
+3. **Total Due by Month (Line Chart):**  
+   - *Business Question:* What are the monthly sales trends, and are there any seasonal patterns?
+
+## Page 3: Total Due With Status by Country
+
+
+
+### Charts and Insights
+1. **Total Due With Status by Country (Table):**  
+   - *Business Question:* Which countries contribute the most to revenue, and what is their active/inactive status?
+2. **Top 13 Books Sold (Table):**  
+   - *Business Question:* Which books are the best-selling, and how much revenue do they generate?
+
+## Page 4: Conclusion
+### Charts and Insights
+1. **Total Shipping Cost by Shipping Method (Bar Chart):**  
+   - *Business Question:* Which shipping methods incur the highest costs?
+2. **Total Due by Country (Map Visualization):**  
+   - *Business Question:* Which regions generate the most revenue geographically?
+
+## Conclusion
+The Gravity Book Store Dashboard provides a comprehensive view of the business, enabling stakeholders to make data-driven decisions. Each page and chart is designed to answer specific business questions, ensuring that the insights are actionable and aligned with business goals.
 
 
 ## (7/8) Key Visualizations
