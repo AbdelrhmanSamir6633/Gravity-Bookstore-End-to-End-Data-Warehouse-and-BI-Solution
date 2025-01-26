@@ -50,6 +50,7 @@ The Gravity Book Store DWH model is designed to support **sales performance anal
 
 
 ## (2/7) OLTP Database Description
+![Gravity bookstore Diagram OLTP DB](https://github.com/user-attachments/assets/fbb4bb99-6770-4a0b-ab5c-80ee79bec38a)
 
 ### 2.1 Overview
 Gravity Bookstore OLTP Database
