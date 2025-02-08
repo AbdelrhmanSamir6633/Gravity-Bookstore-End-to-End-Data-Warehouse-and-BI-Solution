@@ -6,7 +6,7 @@ The Gravity Bookstore project is an end-to-end data solution designed to transfo
 
 ## Contents 
 
-**1) Business Case.**
+<a href="https://github.com/AbdelrhmanSamir6633/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution?tab=readme-ov-file#17-business-case">**1) Business Case.**</a>
 
 **2) OLTP Database Description.**
 
