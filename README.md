@@ -19,8 +19,8 @@ The Gravity Bookstore project is an end-to-end data solution designed to transfo
 <a href="https://github.com/AbdelrhmanSamir6633/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution?tab=readme-ov-file#67-key-visualizations-using-powerbi">**6) Key Visualizations Using PowerBI.**</a>
 
 <a href="https://github.com/AbdelrhmanSamir6633/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution?tab=readme-ov-file#77-data-source--project-files">**7) Data Source & Project Files.**</a>
-
-
+_____________________________________________________________________________________
+<a href="https://github.com/AbdelrhmanSamir6633/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution?tab=readme-ov-file#work-environment--contributors">**Work Environment & Contributors**</a>
 
 
 ## (1/7) Business Case
