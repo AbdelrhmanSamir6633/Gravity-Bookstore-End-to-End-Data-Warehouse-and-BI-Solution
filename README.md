@@ -6,19 +6,21 @@ The Gravity Bookstore project is an end-to-end data solution designed to transfo
 
 ## Contents 
 
-**1) Business Case.**
+<a href="https://github.com/AbdelrhmanSamir6633/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution?tab=readme-ov-file#17-business-case">**1) Business Case.**</a>
 
-**2) OLTP Database Description.**
+<a href="https://github.com/AbdelrhmanSamir6633/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution?tab=readme-ov-file#27-oltp-database-description">**2) OLTP Database Description.**</a>
 
-**3) Data Warehouse Modeling.**
+<a href="https://github.com/AbdelrhmanSamir6633/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution?tab=readme-ov-file#37-data-warehouse-modeling">**3) Data Warehouse Modeling.**</a>
 
-**4) Data Warehouse ETL Process Using SSIS.**
+<a href="https://github.com/AbdelrhmanSamir6633/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution?tab=readme-ov-file#47-data-warehouse-etl-process-using-ssis">**4) Data Warehouse ETL Process Using SSIS.**</a>
 
-**5) Data Analysis Using SSAS.**
+<a href="https://github.com/AbdelrhmanSamir6633/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution?tab=readme-ov-file#57-data-analysis-using-ssas">**5) Data Analysis Using SSAS.**</a>
 
-**6) Key Visualizations Using PowerBI.**
+<a href="https://github.com/AbdelrhmanSamir6633/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution?tab=readme-ov-file#67-key-visualizations-using-powerbi">**6) Key Visualizations Using PowerBI.**</a>
 
-**7) Data Source & Project Files.**
+<a href="https://github.com/AbdelrhmanSamir6633/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution?tab=readme-ov-file#77-data-source--project-files">**7) Data Source & Project Files.**</a>
+_____________________________________________________________________________________
+<a href="https://github.com/AbdelrhmanSamir6633/Gravity-Bookstore-End-to-End-Data-Warehouse-and-BI-Solution?tab=readme-ov-file#work-environment--contributors">**Work Environment & Contributors**</a>
 
 
 ## (1/7) Business Case
